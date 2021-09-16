@@ -89,6 +89,5 @@ client.on('interactionCreate', async interaction => {
     });
   }
 });
-const PORT = process.env.PORT || 3000;
 
 client.login(token);
