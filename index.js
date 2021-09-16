@@ -18,6 +18,17 @@ console.log(client.commands);
 
 const player = new Player(client);
 
+player.on('ready', () => {
+    player.user.setStatus('available')
+    player.user.setPresence({
+        game: {
+            name: 'with depression',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
+        }
+    });
+});
+
 player.on('error', (queue, error) => {
   console.log(`[${queue.guild.name}] Error emitted from the queue: ${error.message}`);
 });
