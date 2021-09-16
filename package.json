@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "repository": "https://github.com/TannerGabriel/discord-music-bot.git",
   "description": "A simple discord music bot",
+  "engines": {
+    "node": "14.x",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
