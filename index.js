@@ -90,11 +90,12 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
-client.login(token);
+client.login(token)
+client.then(client.user.setPresence({status: "dnd"}));
 
 console.log('Spectre Is Now Online!');
-client.user.setPresence({status: "dnd"}); //sets presence
-client.user.setActivity('Made By -Nightmare <3#9999', { type: 'WATCHING' }); //sets activity
+// client.user.setPresence({status: "dnd"}); //sets presence
+// client.user.setActivity('Made By -Nightmare <3#9999', { type: 'WATCHING' }); //sets activity
 
 
 /**WebUI/
