@@ -18,7 +18,7 @@ console.log(client.commands);
 
 const player = new Player(client);
 
-client.user.setStatus('dnd', 'Made by KwinkyWolf') 
+player.user.setStatus('dnd', 'Made by KwinkyWolf') 
 
 player.on('error', (queue, error) => {
   console.log(`[${queue.guild.name}] Error emitted from the queue: ${error.message}`);
