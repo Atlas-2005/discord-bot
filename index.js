@@ -10,7 +10,7 @@ client.commands = new Discord.Collection();
 client.on('ready' , () =>{
   console.log('Bot Is Active');
   client.user.setStatus('online')
-  client.user.setActivity('Test', { type: 'LISTENING' });
+  client.user.setActivity(${track.title}, { type: 'LISTENING' });
 
   console.log('bot status', client.user.presence.status);
 
