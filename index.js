@@ -7,6 +7,15 @@ const {Player} = require('discord-player');
 const client = new Client();
 client.commands = new Discord.Collection();
 
+client.on('ready' , () =>{
+  console.log('Bot esta escuchando');
+  client.user.setStatus('dnd');
+
+  console.log('bot status', client.user.presence.status);
+
+
+});
+
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
