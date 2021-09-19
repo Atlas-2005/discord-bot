@@ -7,7 +7,7 @@ const {Player} = require('discord-player');
 const client = new Client();
 client.commands = new Discord.Collection();
 
-client.on('ready' , () =>{
+client.on('ready' , (queue, track) =>{
   console.log('Bot Is Active');
   client.user.setStatus('online')
   client.user.setActivity('**${track.title}**', { type: 'LISTENING' });
