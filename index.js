@@ -7,15 +7,6 @@ const {Player} = require('discord-player');
 const client = new Client();
 client.commands = new Discord.Collection();
 
-client.on('ready' , (queue, track) =>{
-  console.log('Bot Is Active');
-  client.user.setStatus('online')
-  client.user.setActivity('**${track.title}**', { type: 'LISTENING' });
-
-  console.log('bot status', client.user.presence.status);
-
-
-});
 
 var http = require("http");
 setInterval(function() {
@@ -36,6 +27,16 @@ const player = new Player(client, {
   leaveOnEndCooldown: 300000,
   leaveOnEmpty: true,
   leaveOnEmptyCooldown: 120000
+});
+
+client.on('ready' , (queue, track) =>{
+  console.log('Bot Is Active');
+  client.user.setStatus('online')
+  client.user.setActivity('${track.title}', { type: 'LISTENING' });
+
+  console.log('bot status', client.user.presence.status);
+
+
 });
 
 player.on('error', (queue, error) => {
