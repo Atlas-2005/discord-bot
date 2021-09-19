@@ -31,7 +31,12 @@ for (const file of commandFiles) {
 
 console.log(client.commands);
 
-const player = new Player(client);
+const player = new Player(client, {
+  leaveOnEnd: true,
+  leaveOnEndCooldown: 300000,
+  leaveOnEmpty: true,
+  leaveOnEmptyCooldown: 120000
+});
 
 player.on('error', (queue, error) => {
   console.log(`[${queue.guild.name}] Error emitted from the queue: ${error.message}`);
