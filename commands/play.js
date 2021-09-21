@@ -45,20 +45,26 @@ module.exports = {
       
       const queue = await player.createQueue(interaction.guild, {
         metadata: interaction.channel,
-        leaveOnEnd: !='false' && (() => {
+        leaveOnEnd: true && (() => {
           let timeout = 0
           try {
-//             timeout = parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)
             timeout = 1
           } catch {
             timeout = 0
           }
           return timeout
         })() == 0,
-//         leaveOnStop: false,
-//         leaveOnEmpty: player.client.config.leaveOnEmpty,
-//         leaveOnEmptyCooldown: player.client.config.leaveOnEmptyTimeout * 1000,
-//         initialVolume: player.client.config.initialVolume,
+        leaveOnStop: false,
+        leaveOnEmpty: true,
+        leaveOnEmptyCooldown: (() => {
+          let timeout = 0
+          try {
+            timeout = 10
+          } catch {
+            timeout = 0
+          }
+          return timeout
+        })(), * 1000,
       })
 
 //       const queue = await player.createQueue(interaction.guild, {
