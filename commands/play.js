@@ -54,7 +54,7 @@ module.exports = {
             timeout = 0
           }
           return timeout
-        })(),
+        })() == 0,
 //         leaveOnStop: false,
 //         leaveOnEmpty: player.client.config.leaveOnEmpty,
 //         leaveOnEmptyCooldown: player.client.config.leaveOnEmptyTimeout * 1000,
