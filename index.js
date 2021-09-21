@@ -39,7 +39,7 @@ client.on('ready' , (queue, track) =>{
 
 });
 
-const queue = player.createQueue(interaction.guild, {
+const queue = await player.createQueue(interaction.guild, {
     metadata: interaction.channel,
     leaveOnEnd: true,
     leaveOnEndCooldown: 300000,
