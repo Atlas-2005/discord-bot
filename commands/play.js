@@ -48,7 +48,8 @@ module.exports = {
         leaveOnEnd: true && (() => {
           let timeout = 0
           try {
-            timeout = parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)
+//             timeout = parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)
+            timeout = 10
           } catch {
             timeout = 0
           }
