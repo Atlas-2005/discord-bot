@@ -49,7 +49,7 @@ module.exports = {
           let timeout = 0
           try {
 //             timeout = parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)
-            timeout = 10000
+            timeout = 1
           } catch {
             timeout = 0
           }
