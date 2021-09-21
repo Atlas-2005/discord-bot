@@ -3,10 +3,10 @@ export const token=process.env.DISCORD_BOT_TOKEN
 export const clientId=process.env.DISCORD_CLIENT_ID
 export const leaveOnEnd=process.env.BOT_LEAVE_ON_QUEUE_END?.toLowerCase()!='false'
 export const leaveOnEndTimeout=(() => {
-let timeout=0
-try {
-timeout=parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)
-}
+  let timeout=0
+  try {
+    timeout=parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)
+  }
 catch {
 timeout=0
 }
