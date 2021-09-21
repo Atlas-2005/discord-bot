@@ -48,8 +48,8 @@ module.exports = {
 //         leaveOnEnd:false
         leaveOnEnd: false,
         leaveOnStop: false,
-        leaveOnEmpty: player.client.config.leaveOnEmpty,
-        leaveOnEmptyCooldown: player.client.config.leaveOnEmptyTimeout * 1000,
+        leaveOnEmpty: false,
+        leaveOnEmptyCooldown: 1000,
       });
 
       try {
