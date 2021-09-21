@@ -64,7 +64,7 @@ module.exports = {
             timeout = 0
           }
           return timeout
-        })(), * 1000,
+        })() * 1000,
       })
 
 //       const queue = await player.createQueue(interaction.guild, {
