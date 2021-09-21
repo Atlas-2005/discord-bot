@@ -44,10 +44,7 @@ module.exports = {
         return void interaction.followUp({content: 'No results were found!'});
       
       const queue = await player.createQueue(interaction.guild, {
-        metadata: {
-          channel: interaction.channel,
-          interaction: interaction,
-        },
+        metadata: interaction.channel,
         leaveOnEnd: true && (() => {
           let timeout = 0
           try {
