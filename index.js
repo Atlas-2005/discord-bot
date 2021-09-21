@@ -28,7 +28,7 @@ const player = new Player(client, {
 client.on('ready' , (queue, track) =>{
   console.log('Bot Is Active');
   client.user.setStatus('online')
-  client.user.setActivity('${track.title}', { type: 'LISTENING' });
+  client.user.setActivity('**${queue.current.title}**', { type: 'LISTENING' });
 
   console.log('bot status', client.user.presence.status);
 
