@@ -42,15 +42,26 @@ module.exports = {
         .catch(() => {});
       if (!searchResult || !searchResult.tracks.length)
         return void interaction.followUp({content: 'No results were found!'});
-
+      
       const queue = await player.createQueue(interaction.guild, {
-        metadata: interaction.channel,
-//         leaveOnEnd:false
-        leaveOnEnd: false,
-        leaveOnStop: false,
-        leaveOnEmpty: false,
-        leaveOnEmptyCooldown: 1000,
-      });
+        metadata: {
+          channel: interaction.channel,
+          interaction: interaction,
+        },
+        leaveOnEnd: true && (() => {let timeout = 0 try {timeout = parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)} catch {timeout = 0} return timeout})() == 0,
+//         leaveOnStop: false,
+//         leaveOnEmpty: player.client.config.leaveOnEmpty,
+//         leaveOnEmptyCooldown: player.client.config.leaveOnEmptyTimeout * 1000,
+//         initialVolume: player.client.config.initialVolume,
+      })
+
+//       const queue = await player.createQueue(interaction.guild, {
+//         metadata: interaction.channel,
+//         leaveOnEnd: false,
+//         leaveOnStop: false,
+//         leaveOnEmpty: false,
+//         leaveOnEmptyCooldown: 1000,
+//       });
 
       try {
         if (!queue.connection) await queue.connect(interaction.member.voice.channel);
