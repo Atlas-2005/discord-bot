@@ -45,7 +45,7 @@ module.exports = {
       
       const queue = await player.createQueue(interaction.guild, {
         metadata: interaction.channel,
-        leaveOnEnd: true && (() => {
+        leaveOnEnd: !='false' && (() => {
           let timeout = 0
           try {
 //             timeout = parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)
