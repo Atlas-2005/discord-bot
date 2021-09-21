@@ -48,7 +48,15 @@ module.exports = {
           channel: interaction.channel,
           interaction: interaction,
         },
-        leaveOnEnd: true && (() => {let timeout = 0 try {timeout = parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)} catch {timeout = 0} return timeout})() == 0,
+        leaveOnEnd: true && (() => {
+          let timeout = 0
+          try {
+            timeout = parseInt(process.env.BOT_LEAVE_ON_QUEUE_END_TIMEOUT)
+          } catch {
+            timeout = 0
+          }
+          return timeout
+        })(),
 //         leaveOnStop: false,
 //         leaveOnEmpty: player.client.config.leaveOnEmpty,
 //         leaveOnEmptyCooldown: player.client.config.leaveOnEmptyTimeout * 1000,
