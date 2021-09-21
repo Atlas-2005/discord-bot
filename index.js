@@ -23,7 +23,7 @@ for (const file of commandFiles) {
 console.log(client.commands);
 
 const player = new Player(client, {
-  leaveOnEnd: true,
+  leaveOnEnd: false,
   leaveOnEndCooldown: 300000,
   leaveOnEmpty: true,
   leaveOnEmptyCooldown: 120000
