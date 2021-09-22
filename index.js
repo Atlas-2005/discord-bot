@@ -45,7 +45,7 @@ player.on('connectionError', (queue, error) => {
 
 player.on('trackStart', (queue, track) => {
     queue.metadata.send(`🎶 | Started playing: **${track.title}** in **${queue.connection.channel.name}**!`);
-    var tName = test;
+    var tName = "test";
     client.user.setActivity(tName, { type: 'LISTENING' });
 //   client.user.setActivity('**${queue.metadata.track.title}**', { type: 'LISTENING' });
 });
