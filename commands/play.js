@@ -65,7 +65,7 @@ module.exports = {
           }
           return timeout
         })() * 1000,
-      })
+      });
 
 //       const queue = await player.createQueue(interaction.guild, {
 //         metadata: interaction.channel,
