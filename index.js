@@ -1,6 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const Client = require('./client/Client');
+const client = require('discord-rich-presence')('887865542982107207');
 const {token} = require('./config.json');
 const {Player} = require('discord-player');
 
@@ -49,7 +50,15 @@ player.on('trackStart', (queue, track) => {
     const progress = queue.createProgressBar();
     const perc = queue.getPlayerTimestamp();
     var tProg = perc.end;
-    client.user.setActivity(tName+" "+tProg, { type: 'LISTENING' });
+//     client.updatePresence({
+//         state: 'listening to',
+//         details: tName,
+//         endTimestamp: Date.now() + 1337,
+//         largeImageKey: 'snek_large',
+//         smallImageKey: 'snek_small',
+//         instance: true,
+//     });
+    client.user.setActivity(tName+tProg, { type: 'LISTENING' });
 });
 
 player.on('trackAdd', (queue, track) => {
