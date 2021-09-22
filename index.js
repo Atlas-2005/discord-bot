@@ -48,7 +48,7 @@ player.on('trackStart', (queue, track) => {
     var tName = track.title;
     const progress = queue.createProgressBar();
     const perc = queue.getPlayerTimestamp();
-    var tProg = perc.progress
+    var tProg = queue.currentStreamTime();
     client.user.setActivity(tName+" "+tProg, { type: 'LISTENING' });
 });
 
