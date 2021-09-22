@@ -44,8 +44,8 @@ player.on('connectionError', (queue, error) => {
 });
 
 player.on('trackStart', (queue, track) => {
-    queue.metadata.send(`🎶 | Started playing: **${track.title}** in **${queue.connection.channel.name}**!`);
-    var tName = "test";
+    queue.metadata.send(`🎶 | Started playing: **${track.title}** in **${queue.connection.channel.name}**!`),
+        var tName = track.title;
     client.user.setActivity(tName, { type: 'LISTENING' });
 //   client.user.setActivity('**${queue.metadata.track.title}**', { type: 'LISTENING' });
 });
@@ -58,12 +58,14 @@ player.on('botDisconnect', queue => {
   queue.metadata.send('❌ | I was manually disconnected from the voice channel, clearing queue!');
 });
 
-player.on('channelEmpty', queue => {
+player.on('channelEmpty', quetrue => {
   queue.metadata.send('❌ | Nobody is in the voice channel, leaving...');
 });
 
 player.on('queueEnd', queue => {
-  queue.metadata.send('✅ | Queue finished!');
+    queue.metadata.send('✅ | Queue finished!');
+    var tName = "Nothing"
+    client.user.setActivity(tName, { type: 'LISTENING' });
 });
 
 client.once('ready', async () => {
