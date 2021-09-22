@@ -24,6 +24,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
-    "ytdl-core": "^4.9.1"
+    "ytdl-core": "^4.9.1",
+    "discord-rich-presence": "^0.0.8"
   }
 }
