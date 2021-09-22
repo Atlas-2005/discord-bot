@@ -27,8 +27,7 @@ const player = new Player(client, {
 
 client.on('ready' , (queue, track) =>{
   console.log('Bot Is Active');
-  client.user.setStatus('online')
-  client.user.setActivity('**${queue.current.title}**', { type: 'LISTENING' });
+  client.user.setStatus('online');
 
   console.log('bot status', client.user.presence.status);
 
@@ -46,6 +45,7 @@ player.on('connectionError', (queue, error) => {
 
 player.on('trackStart', (queue, track) => {
   queue.metadata.send(`🎶 | Started playing: **${track.title}** in **${queue.connection.channel.name}**!`);
+  client.user.setActivity('**${queue.metadata.track.title}**', { type: 'LISTENING' });
 });
 
 player.on('trackAdd', (queue, track) => {
