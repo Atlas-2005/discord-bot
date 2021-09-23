@@ -55,6 +55,7 @@ player.on('trackStart', (queue, track) => {
             client.user.setActivity(tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' });
         }
     }
+    status(queue, track);
 //     var tProgNo = tProg.split(':');
 //     if (tProg.replace(/[^0-9\.]+/g, "") <= 6059){tProgNo.unshift('00');}
 //     var tProgMill = (+tProgNo[0]) * 60 * 60 + (+tProgNo[1]) * 60 + (+tProgNo[2]);
