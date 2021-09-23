@@ -54,7 +54,7 @@ module.exports = {
           }
           return timeout
         })() == 0,
-        leaveOnStop: false,
+        leaveOnStop: true,
         leaveOnEmpty: true,
       });
 
