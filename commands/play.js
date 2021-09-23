@@ -56,15 +56,6 @@ module.exports = {
         })() == 0,
         leaveOnStop: false,
         leaveOnEmpty: true,
-        leaveOnEmptyCooldown: (() => {
-          let timeout = 0
-          try {
-            timeout = 10
-          } catch {
-            timeout = 0
-          }
-          return timeout
-        })() * 1000,
       });
 
 //       const queue = await player.createQueue(interaction.guild, {
