@@ -61,7 +61,9 @@ player.on('trackStart', (queue, track) => {
 //         smallImageKey: 'snek_small',
 //         instance: true,
 //     });
+    while (tProg.replace(/[^0-9\.]+/g, "") >= 0001) {
     client.user.setActivity(tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' });
+    }
 });
 
 player.on('trackAdd', (queue, track) => {
