@@ -69,7 +69,7 @@ player.on('botDisconnect', queue => {
   queue.metadata.send('❌ | I was manually disconnected from the voice channel, clearing queue!');
 });
 
-player.on('channelEmpty', quetrue => {
+player.on('channelEmpty', queue => {
   queue.metadata.send('❌ | Nobody is in the voice channel, leaving...');
 });
 
