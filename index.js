@@ -50,18 +50,18 @@ player.on('trackStart', (queue, track) => {
     const progress = queue.createProgressBar();
     const perc = queue.getPlayerTimestamp();
     var tProg = perc.end;
-    var tProgNo = tProg.split(':');
-    if (tProg.replace(/[^0-9\.]+/g, "") <= 6059){tProgNo.unshift('00');}
-    var tProgMill = (+tProgNo[0]) * 60 * 60 + (+tProgNo[1]) * 60 + (+tProgNo[2]);
-    rpc.setActivity({
-        state: '**listening to**',
-        details: tName,
-        endTimestamp: Date.now() + tProgMill,
+//     var tProgNo = tProg.split(':');
+//     if (tProg.replace(/[^0-9\.]+/g, "") <= 6059){tProgNo.unshift('00');}
+//     var tProgMill = (+tProgNo[0]) * 60 * 60 + (+tProgNo[1]) * 60 + (+tProgNo[2]);
+//     rpc.setActivity({
+//         state: '**listening to**',
+//         details: tName,
+//         endTimestamp: Date.now() + tProgMill,
 //         largeImageKey: 'snek_large',
 //         smallImageKey: 'snek_small',
-        instance: true,
-    });
-//     client.user.setActivity(tName+tProg, { type: 'LISTENING' });
+//         instance: true,
+//     });
+    client.user.setActivity(tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' });
 });
 
 player.on('trackAdd', (queue, track) => {
