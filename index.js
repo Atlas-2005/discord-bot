@@ -69,11 +69,15 @@ player.on('trackAdd', (queue, track) => {
 });
 
 player.on('botDisconnect', queue => {
-  queue.metadata.send('❌ | I was manually disconnected from the voice channel, clearing queue!');
+    queue.metadata.send('❌ | I was manually disconnected from the voice channel, clearing queue!');
+    var tName = "Nothing"
+    client.user.setActivity(tName, { type: 'LISTENING' });
 });
 
 player.on('channelEmpty', quetrue => {
-  queue.metadata.send('❌ | Nobody is in the voice channel, leaving...');
+    queue.metadata.send('❌ | Nobody is in the voice channel, leaving...');
+    var tName = "Nothing"
+    client.user.setActivity(tName, { type: 'LISTENING' });
 });
 
 player.on('queueEnd', queue => {
