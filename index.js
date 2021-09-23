@@ -48,8 +48,13 @@ player.on('trackStart', (queue, track) => {
     queue.metadata.send(`🎶 | Started playing: **${track.title}** in **${queue.connection.channel.name}**!`);
     var tName = track.title;
     const progress = queue.createProgressBar();
-    const perc = queue.getPlayerTimestamp();
-    var tProg = perc.end;
+    function status(queue, track){
+        const perc = queue.getPlayerTimestamp();
+        var tProg = perc.end;
+        while (tProg.replace(/[^0-9\.]+/g, "") >= 0001) {
+            client.user.setActivity(tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' });
+        }
+    }
 //     var tProgNo = tProg.split(':');
 //     if (tProg.replace(/[^0-9\.]+/g, "") <= 6059){tProgNo.unshift('00');}
 //     var tProgMill = (+tProgNo[0]) * 60 * 60 + (+tProgNo[1]) * 60 + (+tProgNo[2]);
@@ -61,9 +66,6 @@ player.on('trackStart', (queue, track) => {
 //         smallImageKey: 'snek_small',
 //         instance: true,
 //     });
-//     while (tProg.replace(/[^0-9\.]+/g, "") >= 0001) {
-//     client.user.setActivity(tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' });
-//     }
 });
 
 player.on('trackAdd', (queue, track) => {
