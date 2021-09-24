@@ -1,3 +1,5 @@
+// This is a test
+
 const fs = require('fs');
 const Discord = require('discord.js');
 const Client = require('./client/Client');
