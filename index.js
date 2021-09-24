@@ -132,7 +132,7 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
-client.login(token);
+client.login(token0,token1);
 // client.then(client.user.setPresence({status: "dnd"}));
 
 // console.log('Spectre Is Now Online!');
