@@ -1,5 +1,12 @@
 # Discord Music bot
 
+## How to update
+* Make changes in temprary patch branches
+* Create a pull request into staging and merge yourself
+* Testing heppens in staging useing a test bot 
+* After testing is confirmed to work create a pull request to add to master
+* Pull request will be merged everyday during downtime at 10:00 am, 11:00 am, 1:00 pm, 2:00 pm.
+
 A simple discord bot that helps you manage your server by providing useful commands like playing music or deleting text messages.
 
 You can find the tutorial about building a discord music bot [here](https://gabrieltanner.org/blog/dicord-music-bot). 
