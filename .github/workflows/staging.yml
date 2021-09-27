@@ -1,0 +1,21 @@
+name: Deploy (Auxbot-Master)
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  build:
+    environment: auxbot-staging
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.ATLASAPI}}
+          heroku_app_name: "auxbot-staging" #Must be unique in Heroku
+          heroku_email: "shane.stock2@gmail.com"
+        env:
+          HD_TOKEN: ${{secrets.TOKEN}}
+          HD_API: ${{secrets.ATLASAPI}}
