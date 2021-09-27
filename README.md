@@ -1,7 +1,7 @@
 # Discord Music bot
 
 ## How to update
-* Make changes in temporary patch branches
+* Make changes in temporary patch branches 
 * Create a pull request into staging and merge yourself
 * Testing heppens in staging using a test bot 
 * After testing is confirmed to work create a pull request to add to master
