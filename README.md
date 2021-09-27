@@ -1,5 +1,7 @@
 # Discord Music bot
 
+[![Deploy (Auxbot-Master)](https://github.com/Atlas-2005/discord-bot/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/Atlas-2005/discord-bot/actions/workflows/main.yml)
+[![Deploy (Auxbot-Staging)](https://github.com/Atlas-2005/discord-bot/actions/workflows/staging.yml/badge.svg?branch=Staging)](https://github.com/Atlas-2005/discord-bot/actions/workflows/staging.yml)
 ## How to update
 * Make changes in temporary patch branches 
 * Create a pull request into staging and merge yourself
