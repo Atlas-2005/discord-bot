@@ -1,4 +1,4 @@
 {
     "prefix": "!",
-    "token": {secrets.TOKEN1}
+    "token": ${{secret.SECRET_KEY}}
 }
