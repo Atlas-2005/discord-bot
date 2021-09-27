@@ -19,4 +19,3 @@ jobs:
         env:
           HD_TOKEN: ${{secrets.TOKEN}}
           HD_API: ${{secrets.ATLASAPI}}
-          HD_RANDOM_DATA: "Hello"
