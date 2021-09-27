@@ -4,7 +4,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const Client = require('./client/Client');
 // const rpc = require('discord-rich-presence')('887865542982107207');
-const {token} = require('./config.json');
+const {token} = require('./config.js');
 const {Player} = require('discord-player');
 
 const client = new Client();
