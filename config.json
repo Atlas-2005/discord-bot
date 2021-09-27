@@ -1,4 +1,4 @@
 {
     "prefix": "!",
-    "token": "ODkwNDE2MTcyMTE2MzYxMjY4.YUverg.pTXTokgLXHDxAqjv5Umrr0iOmkk"
+    "token": {{ secrets.SECRET_TOKEN }}
 }
