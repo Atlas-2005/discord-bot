@@ -16,4 +16,6 @@ jobs:
           heroku_app_name: "auxbot-master" #Must be unique in Heroku
           heroku_email: "shane.stock2@gmail.com"
         env:
-          HD_FTOKEN: ${{secrets.TOKEN}}
+          HD_TOKEN: ${{secrets.TOKEN}}
+          HD_API: ${{secrets.ATLASAPI}}
+          HD_RANDOM_DATA: "Hello"
