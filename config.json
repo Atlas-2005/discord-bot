@@ -1,4 +1,4 @@
 {
     "prefix": "!",
-    "token": {{secret.TOKEN1}}
+    "token": process.env.TOKEN
 }
