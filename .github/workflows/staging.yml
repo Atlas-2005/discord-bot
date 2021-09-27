@@ -1,4 +1,4 @@
-name: Deploy (Auxbot-Master)
+name: Deploy (Auxbot-Staging)
 
 on:
   push:
