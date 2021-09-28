@@ -13,8 +13,8 @@ client.commands = new Discord.Collection();
 
 var http = require("http");
 setInterval(function() {
-    http.get("http://auxbot-master.herokuapp.com");
-    http.get("http://auxbot-staging.herokuapp.com");
+    http.get(process.env.MASTERPINGURL);
+    http.get(process.env.STAGEPINGURL);
 }, 300000); // every 5 minutes (300000)
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
