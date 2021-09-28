@@ -18,3 +18,5 @@ jobs:
           heroku_email: ${{secrets.HEROKUEMAIL}}
         env:
           HD_TOKEN: ${{secrets.TOKEN}}
+          HD_STAGEPINGURL: ${{secrets.STAGEPINGURL}}
+          HD_MASTERPINGURL: ${{secrets.MASTERPINGURL}}
