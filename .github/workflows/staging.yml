@@ -11,11 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: ${{secrets.ATLASAPI}}
-          heroku_app_name: "auxbot-staging" #Must be unique in Heroku
-          heroku_email: "shane.stock2@gmail.com"
+          heroku_api_key: ${{secrets.HEROKUAPI}}
+          heroku_app_name: ${{secrets.HEROKUAPP}}
+          heroku_email: ${{secrets.HEROKUEMAIL}}
         env:
           HD_TOKEN: ${{secrets.TOKEN}}
-          HD_API: ${{secrets.ATLASAPI}}
