@@ -2,7 +2,7 @@ module.exports = {
 // Uncomment settings that you want enabled
 
 // Fill discord token in if you are not using github secrets
-  "discord_token": ;
+  "discord_token": ,
 
 // Set your prefix for the deploy command below
   "prefix": "!",
