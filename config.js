@@ -8,7 +8,7 @@ module.exports = {
   "prefix": "!",
 
 // Use the following section to setup your discord bot status
-  "status": tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' }
+  "status": tName+" | "+"Song Length - "+tProg, {type: "LISTENING"}
 
 // DON'T TOUCH ANYTHING BELOW THIS!!!
   if (process.env.TOKEN && (discord_token =>0)) {
