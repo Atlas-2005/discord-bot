@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'Disconnect',
+  name: 'disconnect',
   description: 'Disconnect me from the voice channel!',
     execute(interaction) {
       message.guild.me.voice.channel.leave();
