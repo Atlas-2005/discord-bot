@@ -5,7 +5,9 @@ const Discord = require('discord.js');
 const Client = require('./client/Client');
 // const rpc = require('discord-rich-presence')('887865542982107207');
 const {token} = require('./config.js');
+const {prefix} = require('./config.js');
 const {Player} = require('discord-player');
+const {status} = require('./config.js');
 
 const client = new Client();
 client.commands = new Discord.Collection();
@@ -53,7 +55,7 @@ player.on('trackStart', (queue, track) => {
     const progress = queue.createProgressBar();
     const perc = queue.getPlayerTimestamp();
     var tProg = perc.end;
-    client.user.setActivity(tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' });
+    client.user.setActivity(status);
 //     var tProgNo = tProg.split(':');
 //     if (tProg.replace(/[^0-9\.]+/g, "") <= 6059){tProgNo.unshift('00');}
 //     var tProgMill = (+tProgNo[0]) * 60 * 60 + (+tProgNo[1]) * 60 + (+tProgNo[2]);
@@ -105,7 +107,7 @@ client.on("messageCreate", async (message) => {
   if (message.author.bot || !message.guild) return;
   if (!client.application?.owner) await client.application?.fetch();
 
-  if (message.content === "!deploy") {
+  if (message.content === prefix+"deploy") {
       await message.guild.commands.set(client.commands).then(() => {
         message.reply("Deployed!");
       })
