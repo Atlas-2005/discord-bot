@@ -11,7 +11,7 @@ module.exports = {
   // "status": tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' }
 
 // DON'T TOUCH ANYTHING BELOW THIS!!!
-  if (discord_token == 0) {
+  if (discord_token => 0) {
     "token": process.env.TOKEN
   } else {
     "token": discord_token
