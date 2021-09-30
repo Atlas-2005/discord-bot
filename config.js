@@ -7,7 +7,8 @@
   var prefix = "!";
 
 // Use the following section to setup your discord bot status
-  // "status": tName+" | "+"Song Length - "+tProg, { type: 'LISTENING' }
+  var status = "tName+" | "+"Song Length - "+tProg"
+  var statustype = "{ type: 'LISTENING' }"
 
 // DON'T TOUCH ANYTHING BELOW THIS!!!
   if (discord_token => 0) {
@@ -18,5 +19,7 @@
 
 module.exports = {
   "prefix": prefix,
+  "status": status,
+  "statust": statustype,
   "token": token
 };
