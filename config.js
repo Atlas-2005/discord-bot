@@ -6,9 +6,9 @@
 // Set your prefix for the deploy command below
   var prefix = "!";
 
-// Use the following section to setup your discord bot status
-var status = "tName+\" | \"+\"Song Length - \"+tProg";
-var statustype = "{ type: 'LISTENING' }";
+// Use the following section to setup your discord bot status, fill what you want the bot to say in the qotation marks, and set 1 or 2 for before now playing or after.
+var status = "";
+var zone = 1;
 
 // DON'T TOUCH ANYTHING BELOW THIS!!!
   if (discord_token => 0) {
@@ -16,10 +16,18 @@ var statustype = "{ type: 'LISTENING' }";
   } else {
     var token = discord_token
   }
+  
+  if (zone => 1) {
+    var statusp = status;
+    var statusa = "";
+  } else {
+    var statusp = "";
+    var statusa = status;
+  }
 
 module.exports = {
   "prefix": prefix,
-  "status": status,
-  "statust": statustype,
+  "statusp": statusp,
+  "statusa": statusa,
   "token": token
 };
