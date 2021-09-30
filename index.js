@@ -7,8 +7,8 @@ const Client = require('./client/Client');
 const {token} = require('./config.js');
 const {prefix} = require('./config.js');
 const {Player} = require('discord-player');
-const {status} = require('./config.js');
-const {statust} = require('./config.js');
+const {statusp} = require('./config.js');
+const {statusa} = require('./config.js');
 
 
 const client = new Client();
@@ -57,7 +57,7 @@ player.on('trackStart', (queue, track) => {
     const progress = queue.createProgressBar();
     const perc = queue.getPlayerTimestamp();
     var tProg = perc.end;
-    client.user.setActivity(status,statust);
+    client.user.setActivity(tName+" | "+"Song Length - "+tProg,{ type: 'LISTENING' });
 //     var tProgNo = tProg.split(':');
 //     if (tProg.replace(/[^0-9\.]+/g, "") <= 6059){tProgNo.unshift('00');}
 //     var tProgMill = (+tProgNo[0]) * 60 * 60 + (+tProgNo[1]) * 60 + (+tProgNo[2]);
