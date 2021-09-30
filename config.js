@@ -17,6 +17,6 @@
   }
 
 module.exports = {
-  "prefix": prefix
+  "prefix": prefix,
   "token": token
 };
